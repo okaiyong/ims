@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>IMS</title>
+
+		<!------------------------>
+		<!-- External Libraries -->
+		<!------------------------>	
+
+		<!-- MDL badge stylesheet -->
+		<link rel="stylesheet" type="text/css" href="lib/mdl/badge.css">
+		<!--<link rel="stylesheet" type="text/css" href="lib/mdl/badge.min.css">-->
+
+		<!-- jquery library -->
+		<!-- <script src="lib/jquery/jquery.js"></script>-->
+		<script src="lib/jquery/jquery.min.js"></script>	
+		<script src="lib/jquery/jquery-ui.min.js"></script>
+		
+		<!-- angular library -->
+		<!-- <script src="lib/angular/angular.js"></script>-->
+		<script src="lib/angular/angular.min.js"></script>
+		<!-- <script src="lib/angular/angular-aria.js"></script>-->
+		<script src="lib/angular/angular-aria.min.js"></script>
+		<!-- <script src="lib/angular/angular-animate.js"></script>-->
+		<script src="lib/angular/angular-animate.min.js"></script>
+		<!-- <script src="lib/angular/angular-route.js"></script>-->
+		<script src="lib/angular/angular-route.min.js"></script>
+		<script src="lib/angular/angular-sanitize.min.js"></script>
+		<!-- <script src="lib/angular-scrollglue/scrollglue.js"></script>-->
+		<script src="lib/angular-scrollglue/scrollglue.min.js"></script>
+		<!--<script src="lib/angular/angular-dragdrop.js"></script>-->
+		<script src="lib/angular/angular-dragdrop.min.js"></script>
+
+		<!-- angular ui router -->
+		<!--<script src="lib/angular-ui-router/angular-ui-router.js"></script>-->
+		<script src="lib/angular-ui-router/angular-ui-router.min.js"></script>
+
+		<!-- local storage -->
+		<script src="lib/angular-localstorage/angular-local-storage.js"></script>
+		<!--<script src="lib/angular-localstorage/angular-local-storage.min.js"></script>-->
+
+		<!--  Angular Material -->
+		<!--<link rel="stylesheet" href="lib/angular-material/angular-material.css" />-->
+		<link rel="stylesheet" href="lib/angular-material/angular-material.min.css" />
+		<script src="lib/angular-material/angular-material.js"></script>
+		<script src="lib/angular-material/angular-messages.js"></script>
+
+		<!-- Angular Material Fileinput -->
+		<link rel="stylesheet" href="lib/file-input/lf-ng-md-file-input.css" />
+		<script src="lib/file-input/lf-ng-md-file-input.js"></script>
+		
+		<!-- Angular Material Calendar -->
+		<link rel="stylesheet" type="text/css" href="lib/angular-material-calendar/angular-material-calendar.css"/>
+		<script src="lib/angular-material-calendar/angular-material-calendar.js"></script>
+
+		<!-- Angular Material Table -->
+		<link rel="stylesheet" type="text/css" href="lib/angular-material-table/md-data-table.css">
+		<script src="lib/angular-material-table/md-data-table.js"></script>
+	
+		<!-- angular rich text editor -->
+		<link rel="stylesheet" href="lib/angular-richtexteditor/editor.css">
+		<script src="lib/angular-richtexteditor/wysiwyg.js"></script>
+
+		<!-- ng scroll -->
+		<script src="lib/angular-ngscroll/ng-infinite-scroll.js"></script>
+
+		<!-- websockets-->
+		<script src="lib/sockjs/sockjs.js"></script>
+		<!-- <script src="lib/sockjs/sockjs.min.js"></script>-->
+		<script src="lib/stomp/stomp.js"></script>
+		<!-- <script src="lib/stomp/stomp.min.js"></script>-->
+
+		<!-- ui-grid -->
+		<link rel="stylesheet" type="text/css" href="lib/angular-ui-grid/ui-grid.min.css">
+		<script src="lib/angular-ui-grid/ui-grid.min.js"></script>
+
+		<!-- csv-js -->
+		<!-- // <script src="lib/csv-js/csv.js"></script> -->
+
+		<!-- ui-utils for validation -->
+		<script src="lib/angular-ui-utils/ui-utils.js"></script>
+		
+		<!-- loading bar -->
+		
+		<link rel="stylesheet" type="text/css" href="lib/angular-loading-bar/loading-bar.min.css">
+		<script src="lib/angular-loading-bar/loading-bar.min.js"></script>
+		
+		<!------------->
+		<!-- CimsOps -->
+		<!------------->
+
+		<!-- App -->
+		<script src="app/app.module.js"></script>
+
+		<script src="app/features/calendar/calendar.controller.js"></script>
+		<script src="app/features/event/event.controller.js"></script>
+		<script src="app/features/event/table.controller.js"></script>
+		<script src="app/models/event.model.js"></script>
+
+
+	</head>
+	
+  	<body layout="column" style="background: #e4dfdf">
+		<div flex>
+			<div ng-include="'app/features/event/event.html'"></div>
+		</div>
+	</body>
+</html>
