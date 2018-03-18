@@ -1,0 +1,22 @@
+<style>
+	.selector {
+		outline: none;
+		cursor: pointer
+	}
+	.selector:hover: {
+		background: grey;
+	}
+</style>
+
+<div ng-controller="EventController">
+	<div layout="row" layout-align="end end" layout-padding>
+		<div class="selector" ng-click="setView('table')">Table</div>
+		<div style="margin-left: 6px; margin-right: 6px;">|</div>
+		<div class="selector" ng-click="setView('calendar')">Calendar</div>
+	</div>
+	<div layout="row" flex>
+		<md-card ng-if="activeView === 'table'" ng-include="'app/features/event/table1.html'" flex></md-card>
+		<div ng-if="activeView === 'calendar'" ng-include="'app/features/calendar/calendar.html'" flex></div>
+		<div ng-if="showDetails" style="margin-left: 8px" ng-include="'app/features/event/details.html'" flex="30"></div>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+<div ng-controller="EventTableController">
+<md-toolbar class="md-table-toolbar md-default">
+  <div class="md-toolbar-tools">
+    <span>Events</span>
+    <span flex></span>
+  </div>
+</md-toolbar>
+
+<md-table-container>
+  <table data-md-table data-md-row-select="options.rowSelection" multiple="{{options.multiSelect}}" data-ng-model="selected" md-progress="promise">
+    <thead ng-if="!options.decapitate" md-head data-md-order="query.order" md-on-reorder="onReorder">
+      <tr md-row>
+        <th md-column md:order:by="name"><span>SN</span></th>
+        <th md-column md:order:by="type"><span>Name</span></th>
+        <th md-column><span>Time Start</span></th>
+        <th md-column><span>Time End</span></th>
+        <th md-column><span>Type</span></th>
+      </tr>
+    </thead>
+    <tbody md-body>
+      <tr md-row md-select="dessert" md-select-id="name" data-md-on-select="log" md-on-deselect="deselect" x-md-auto-select="options.autoSelect" ng-disabled="dessert.calories.value > 400" data-ng-repeat="event in events">
+        <td md-cell>{{$index + 1}}</td>
+        <td md-cell>{{event.name}}</td>
+        <td md-cell>{{event.timeStart | date: 'dd MMM yy hh:mm a'}}</td>
+        <td md-cell>{{event.timeEnd| date: 'dd MMM yy hh:mm a'}}</td>
+        <td md-cell>{{event.type}}</td>
+      </tr>
+    </tbody>
+  </table>
+</md-table-container>
+
+<!-- <data-md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page" md-total="{{desserts.count}}" md-on-paginate="onPaginate" md-page-select="options.pageSelect" md-boundary-links="options.boundaryLinks"></data-md-table-pagination>
+</div> -->
+
+

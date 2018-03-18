@@ -1,0 +1,20 @@
+<div md-whiteframe="2" style="background: white" layout-padding layout-fill>
+	<div ng-if="selectedEvent">
+		<h4>Event Name: {{selectedEvent.name}}</h4>
+
+		<table>
+			<tr>
+				<td>Time Start:</td>
+				<td>{{selectedEvent.timeStart | date: 'dd MMM yy hh:mm a'}}</td>				
+			</tr>
+			<tr>
+				<td>Time End:</td>
+				<td>{{selectedEvent.timeEnd | date: 'dd MMM yy hh:mm a'}}</td>				
+			</tr>
+		</table>
+	</div>
+
+	<div ng-if="!selectedEvent">
+		No event
+	</div>
+</div>
